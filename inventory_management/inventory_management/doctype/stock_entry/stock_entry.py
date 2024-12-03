@@ -42,7 +42,6 @@ class StockEntry(Document):
             "item": entry_item.item,
             "warehouse": warehouse
         }, ["qty_changed"])
-		print(qty)
 		total_qty = sum([q[0] for q in qty])
 		print("total", total_qty)
 		if total_qty < entry_item.qty:
@@ -131,9 +130,7 @@ class StockEntry(Document):
             .where(sle.item == entry_item.item)
             .where(sle.warehouse == warehouse)
 		)
-		print(query.get_sql())
 		results = query.run(as_dict=True)
-		print(results)
 		if results[0].get("sum of product of qty and cost"):
 			numerator = results[0].get("sum of product of qty and cost") 
 			denominator = results[0]["sum of qty"]

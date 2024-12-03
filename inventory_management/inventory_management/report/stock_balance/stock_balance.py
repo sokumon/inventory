@@ -83,7 +83,17 @@ def get_data(filters=None) -> list[list]:
 
         print(balance_qty_query)
         # ORDER BY `valuation_rate` DESC LIMIT 1
-        valudation_rate_query = f"SELECT `valuation_rate` FROM `tabStock Ledger Entry` WHERE `item` = '{entry_item["item"]}' AND `posting_date` = '{entry_item["posting_date"]}' AND `warehouse` = '{entry_item["warehouse"]}' ORDER BY `valuation_rate` DESC LIMIT 1;"
+        valudation_rate_query = f"""
+        SELECT 
+        	`valuation_rate` 
+        FROM 
+        	`tabStock Ledger Entry` 
+        WHERE 
+        	`item` = '{entry_item["item"]}' 
+         	AND `posting_date` = '{entry_item["posting_date"]}' 
+          	AND `warehouse` = '{entry_item["warehouse"]}' 
+        ORDER BY `valuation_rate` DESC LIMIT 1;"
+        """
 
         balance_result = frappe.db.sql(balance_qty_query, as_dict=1)
         valuation_rate_result = frappe.db.sql(valudation_rate_query, as_dict=1)

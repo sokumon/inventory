@@ -69,7 +69,18 @@ def get_data(filters=None) -> list[list]:
 
     for entry_item in ledgers:
         sle = frappe.qb.DocType("Stock Ledger Entry")
-        balance_qty_query = f"SELECT SUM(`qty_changed`) as 'balance_qty',`valuation_rate` FROM `tabStock Ledger Entry` WHERE `item` = '{entry_item["item"]}' AND `posting_date` = '{entry_item["posting_date"]}' AND `warehouse` = '{entry_item["warehouse"]}';"
+        balance_qty_query = f"""
+		SELECT 
+			SUM(`qty_changed`) AS 'balance_qty',
+			`valuation_rate` 
+		FROM 
+			`tabStock Ledger Entry` 
+		WHERE 
+			`item` = '{entry_item["item"]}' 
+			AND `posting_date` = '{entry_item["posting_date"]}' 
+			AND `warehouse` = '{entry_item["warehouse"]}';
+		"""
+
         print(balance_qty_query)
         # ORDER BY `valuation_rate` DESC LIMIT 1
         valudation_rate_query = f"SELECT `valuation_rate` FROM `tabStock Ledger Entry` WHERE `item` = '{entry_item["item"]}' AND `posting_date` = '{entry_item["posting_date"]}' AND `warehouse` = '{entry_item["warehouse"]}' ORDER BY `valuation_rate` DESC LIMIT 1;"

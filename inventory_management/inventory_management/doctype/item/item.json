@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:item_code",
+ "creation": "2024-11-29 20:48:22.378075",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_section",
+  "item_name",
+  "brand",
+  "item_description",
+  "item_code",
+  "default_warehouse",
+  "opening_information_section",
+  "opening_stock_quantity",
+  "opening_stock_unit_cost",
+  "opening_stock_balance",
+  "column_break_mvpj",
+  "opening_warehouse",
+  "same_as_default_warehouse"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Text Editor",
+   "label": "Item Description"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break",
+   "label": "Item"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "label": "Item Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "default_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "opening_information_section",
+   "fieldtype": "Section Break",
+   "label": "Opening Information"
+  },
+  {
+   "fieldname": "opening_warehouse",
+   "fieldtype": "Link",
+   "label": "Opening Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "opening_stock_unit_cost",
+   "fieldtype": "Currency",
+   "label": "Opening Stock Unit Cost"
+  },
+  {
+   "fieldname": "opening_stock_quantity",
+   "fieldtype": "Float",
+   "label": "Opening Stock Quantity"
+  },
+  {
+   "fieldname": "column_break_mvpj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "same_as_default_warehouse",
+   "fieldtype": "Check",
+   "label": "Same as Default Warehouse"
+  },
+  {
+   "fieldname": "opening_stock_balance",
+   "fieldtype": "Currency",
+   "label": "Opening Stock Balance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-30 20:20:33.441002",
+ "modified_by": "Administrator",
+ "module": "Inventory Management",
+ "name": "Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

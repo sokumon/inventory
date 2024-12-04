@@ -36,7 +36,7 @@ class TestStockEntry(IntegrationTestCase):
 
     def test_check_item(self):
         create_item()
-        self.assertTrue(frappe.db.exists("ITEM", "TEST-001"))
+        self.assertTrue(frappe.db.exists("Item", "TEST-001"))
 
     def test_check_stock_entry(self):
         result = frappe.db.sql("SELECT `parent` FROM `tabStock Entry Item` where item = 'TEST-001';", as_dict = 1)

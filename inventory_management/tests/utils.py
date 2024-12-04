@@ -13,6 +13,7 @@ def create_item():
             test_item.insert()
 
 def create_stock_entry():
+        create_warehouse()
         create_item()
         item = frappe.get_doc("Item", "TEST-001")
         if not frappe.db.exists("Stock Entry", "SE-1111"):
@@ -30,3 +31,11 @@ def create_stock_entry():
             })
             test_stock_entry.insert()
             test_stock_entry.submit()
+
+def create_warehouse():
+      warehouse = frappe.get_doc({
+            "doctype":"Warehouse",
+            "company":"Apsara",
+            "contact":"+91-1234567890",
+      })
+      warehouse.insert()

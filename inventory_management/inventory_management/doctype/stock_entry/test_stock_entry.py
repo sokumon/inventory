@@ -35,6 +35,7 @@ class TestStockEntry(IntegrationTestCase):
  
 
     def test_check_item(self):
+        create_item()
         self.assertTrue(frappe.db.exists("ITEM", "TEST-001"))
 
     def test_check_stock_entry(self):

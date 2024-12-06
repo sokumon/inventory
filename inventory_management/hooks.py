@@ -11,15 +11,14 @@ app_license = "agpl-3.0"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "inventory_management",
-# 		"logo": "/assets/inventory_management/logo.png",
-# 		"title": "Inventory Management",
-# 		"route": "/inventory_management",
-# 		"has_permission": "inventory_management.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "inventory_management",
+		"logo": "/assets/inventory_management/inventory.png",
+		"title": "Inventory",
+		"route": "/app/inventory",
+	}
+]
 
 # Includes in <head>
 # ------------------

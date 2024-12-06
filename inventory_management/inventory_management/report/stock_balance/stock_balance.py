@@ -102,7 +102,7 @@ def get_ledger_entries(filters):
         	sle.valuation_rate,
             fn.Sum(sle.qty_changed).as_('balance_qty')
         )
-        .groupby(sle.item, sle.warehouse)
+        .groupby(sle.item, sle.warehouse,sle.posting_date)
         .orderby(sle.posting_date)
     )
     print(query.get_sql())
@@ -114,7 +114,7 @@ def get_ledger_entries(filters):
 
 def apply_filters(filters, sle, query):
     if "from_date" in filters:
-        query = query.where(sle.posting_date == filters["from_date"])
+        query = query.where(sle.posting_date == filters["posting_date"])
     if "warehouse" in filters:
         query = query.where(sle.warehouse == filters["warehouse"])
     if "item" in filters:

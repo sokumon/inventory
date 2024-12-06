@@ -1,0 +1,63 @@
+{
+ "app": "inventory_management",
+ "charts": [],
+ "content": "[{\"id\":\"bz2j85d8WQ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Welcome to Inventory Management</span><span class=\\\"h4\\\"><b></b></span>\",\"col\":12}},{\"id\":\"86cUnNcXxl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"7ohah3uUKt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Stock Entry\",\"col\":3}},{\"id\":\"JmiZOot7nS\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"Dtjd9rXqI4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Ledger Report\",\"col\":6}},{\"id\":\"Dz7uhMUGwE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Balance Report\",\"col\":6}}]",
+ "creation": "2024-12-05 12:39:45.519876",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "table_2",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Inventory",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2024-12-05 15:18:52.965193",
+ "modified_by": "Administrator",
+ "module": "Inventory Management",
+ "name": "Inventory",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Stock Entry",
+   "link_to": "Stock Entry",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Item",
+   "link_to": "Item",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stock Ledger Report",
+   "link_to": "Stock Ledger",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stock Balance Report",
+   "link_to": "Stock Balance",
+   "type": "Report"
+  }
+ ],
+ "title": "Inventory",
+ "type": "Workspace"
+}
